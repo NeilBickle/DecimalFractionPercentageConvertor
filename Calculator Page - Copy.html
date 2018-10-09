@@ -1,0 +1,115 @@
+﻿
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Fraction To Decimal</title>
+</head>
+<body onload="window_onload()">
+    <p><b><i id="par16"></i></b></p>
+    <p><b><i>Fraction To Decimal Calculator</i></b></p>
+   <p><b><i>Numerator</i></b></p> <input id="txtY1" type="text" ><br/>
+    <br/><input id="txtX" disabled="disabled" value="--------------------------------------------------------------------"><br/>
+    <p><b><i>Denominator</i></b></p><input id="txtY2" type="text" ><br/>
+    <br/><input id="btnDeci" type="button" value="DecimalAnswer" onclick="btnDeci_onclick()"><br/>
+    <p id="parD" style="background-color: gold; width: 200px;"></p><br/>
+    <p><b><i>Decimal To Fraction Calculator</i></b></p>
+    <p><b><i>Enter Your Decimal Here:</i></b></p><input id="txtD1" type="text"><br/>
+    <p><b><i>Enter Either 10, 100 Or 1000 Dependent On How Many Zero's After The Decimal Point:</i></b></p><input id="txtD2" type="text"><br/>
+    <br/><input id="btnFraction" type="button" value="Fraction" onclick="btnFraction_onclick()"><br/>
+    <p id="parF"></p>
+    <input id="txtRandom" type="text" value="--------------------------------------------" disabled="disabled"><br/>
+    <p id="parT"></p><br/>
+    <p><b><i>Fraction To Percentage Calculator</i></b></p>
+    <p><b><i>Numerator</i></b></p><input id="txtP1" type="text"><br/>
+    <br/><input id="txtG" disabled="disabled" value="------------------------------------------------------------------------------"><br/>
+    <br/><p><b><i>Denominator</i></b></p><input id="txtP2" type="text"><br/>
+    <br/> <input id="btnPercent" type="button" value="Percent" onclick="btnPercent_onclick()"><br/>
+    <input id="txtCal" type="text" disabled="disabled" style="visibility:hidden"><br/>
+    <input id="txtRes" disabled="disabled" style="width: 80px;"><input id="txtRan" value="%" disabled="disabled" style="width: 25px;"><br/>
+    <p><b><i>Percentage To Fraction Calculator</i></b></p>
+    <p><b><i>Percentage Under 100%</i></b></p><input id="txtO1" type="text"><input id="txtPer" disabled="disabled" value="%" style="width: 25px;"><br/>
+    <br/> <input id="btnP" type="button" value="FractionAnswer" onclick="btnP_onclick()"><br/>
+    <p id="par5"></p>
+    <input id="txtM" disabled="disabled" value="-----------------------------------------------"><br/>
+    <input id="txtN" disabled="disabled" value="100"><br/>
+    <br/><p><b><i>Percentage To Decimal Calculator</i></b></p>
+    <p><b><i>Percentage Under 100%</i></b></p><input id="txtK1" type="text"><input id="txtMi" disabled="disabled" style="width: 25px;" value="%"><br/>
+    <br/><input id="btnDeciPerc" type="button" value="DecimalAnswer" onclick="btnDeciPerc_onclick()"><br/>
+    <br/><p id="par8"></p><br/>
+    <p><b><i>Decimal To Percentage Calculator</i></b></p>
+    <p><b><i>Decimal Number</i></b></p><input id="txtL1" type="text"><br/>
+    <br/><input id="btnPercDeci" type="button" value="PercentAnswer" onclick="btnPercDeci_onclick()"><br/>
+    <br/><input id="txtres2" disabled="disabled" style="width: 70px;"><input id="txtocs" disabled="disabled" value="%" style="width: 25px;"><br/>
+    <p><b><i>Complex Decimal And Decimals That Equal Top Heavy Fractions To Fraction Calculator</i></b></p>
+    <p><b><i>Complex Decimal Number</i></b></p><input id="txtJ1" type="text"><br/>
+    <p><b><i>Amount Going Up With A Zero On The End Every Time A New Number Is Added To The Decimal Number, for example for a decimal number 0.975 this number would be 1000</i></b></p><input id="txtJ2" type="text"><br/>
+    <br/><input id="btnC" type="button" value="Fraction" onclick="btnC_onclick()"><br/>
+    <p id="par10"></p><br/>
+    <input id="txtD" disabled="disabled" value="------------------------------------------------------"><br/>
+    <p id="par11"></p><br/>
+    <p><b><i>Top Heavy Fractions To Decimal</i></b></p>
+    <p><b><i>Numerator</i></b></p><input id="txtQ1" type="text"><br/>
+    <br/><input id="txtR2" disabled="disabled" value="------------------------------------------------------------"><br/>
+    <p><b><i>Denomantor</i></b></p><input id="txtQ2" type="text"><br/>
+    <br/><input id="btnS" type="button" value="Decimal" onclick="btnS_onclick()"><br/>
+    <p id="par14"></p><br/>
+    <p><b><i>Decimals Above 1 To Percentage Calculator</i></b></p>
+    <p><b><i>Decimal Above 1</i></b></p><input id="txtG2" type="text"><br/>
+    <br/><input id="btnH" value="Percentage Answer" type="button" onclick="btnH_onclick()"><br/>
+    <br/><input id="txt14" disabled="disabled"><input id="txt15" disabled="disabled" value="%" style="width: 25px;"><br/> 
+
+
+
+    <p><b><i>References  https://www.mathsisfun.com/converting-decimals-fractions.html  www.bbc.co.uk/schools/gcsebitesize/maths/number/fracsdecpersrev1.shtml https://www.google.co.uk/search?q=how+to+convert+fraction+to+a+percentage&oq=How+to+convert+fraction+to+a+&aqs=chrome.2.69i57j0l5.10278j0j7&sourceid=chrome&ie=UTF-8  https://www.google.co.uk/search?q=how+to+convert+a+percentage+to+a+decimal&oq=how+to+convert+a+percentage+to+a+&aqs=chrome.2.0j69i57j0l4.6452j0j7&sourceid=chrome&ie=UTF-8 </i></b></p>
+</body=">
+</html>
+<script language="javascript">
+
+    function window_onload() {
+        par16.innerText = "Fraction, Decimal And Percentage Calculators  ";
+        window.setInterval("TextShift()", 200);
+    }
+
+    function TextShift() {
+        par16.innerText = String(par16.innerText).slice(1) + String(par16.innerText).substr(0, 1);
+    }
+
+    function btnDeci_onclick() {
+        parD.innerText = txtY1.value / txtY2.value;
+    }
+
+    function btnFraction_onclick() {
+        parF.innerText = txtD1.value * txtD2.value;
+        parT.innerText = txtD2.value;
+    }
+
+    function btnPercent_onclick() {
+        txtCal.value = txtP1.value / txtP2.value;
+        txtRes.value = txtCal.value * parseInt(100);
+    }
+
+    function btnP_onclick() {
+        par5.innerText = txtO1.value;
+    }
+
+    function btnDeciPerc_onclick(){
+        par8.innerText = txtK1.value / 100;
+    }
+
+    function btnPercDeci_onclick() {
+        txtres2.value = txtL1.value * 100;
+    }
+
+    function btnC_onclick() {
+        par10.innerText = txtJ1.value * txtJ2.value;
+        par11.innerText = txtJ2.value;
+    }
+
+    function btnS_onclick() {
+        par14.innerText = txtQ1.value / txtQ2.value;
+    }
+
+    function btnH_onclick() {
+        txt14.value = txtG2.value * 100;
+    }
+</script>
